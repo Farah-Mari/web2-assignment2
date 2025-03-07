@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #655170;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  background-color: #d4b5e6;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: clamp(300px, 50vw, 700px);
+}
+
+.settings-container {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+#settingsBtn {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#modeDisplay {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 18px 30px;
+  border-radius: 6px;
+  background-color: #4f335765;
+  height: 60px;
+  text-align: center;
+}
+
+#timerDisplay {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #f1f1f1;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 350px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+}
+
+#playPauseBtn {
+  background-color: #679b50c2;
+  color: white;
+}
+
+#resetBtn {
+  background-color: #693f74d0;
+  color: white;
+}
+
+button i {
+  font-size: 18px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
+
+#settingsForm {
+  background-color: #4f335765;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+#settingsForm h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#settingsForm label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+#settingsForm input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+#settingsForm button[type="submit"] {
+  width: 100%;
+  background-color: #4932509a;
+  color: white;
+  margin-top: 10px;
+}
+
+.tasks-container {
+  text-align: left;
+}
+
+.tasks-container h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#taskForm {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#taskForm input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #535f79;
+  border-radius: 6px;
+}
+
+#taskForm button {
+  padding: 8px 12px;
+  background-color: #693f74d0;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+#taskList {
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  background-color: #4f3357ab;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#taskList li button {
+  background-color: #4f335700;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .top-buttons {
+    justify-content: space-around;
+  }
+  #modeDisplay {
+    padding: 12px 20px;
+    height: auto;
+  }
+  #timerDisplay {
+    font-size: 36px;
+  }
+  .container {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .settings-container {
+    top: 400px;
+    left: 10px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+  #modeDisplay {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  #timerDisplay {
+    font-size: 28px;
+  }
+  button {
+    width: 70px;
+    height: 35px;
+    font-size: 14px;
+  }
+  .top-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+}
